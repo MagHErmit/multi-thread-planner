@@ -42,7 +42,7 @@ TEST_F(FutureTest, InvokeException) {
     ASSERT_THROW(future->get(), std::logic_error);
 }
 
-TEST_F(FutureTest, Then) {
+TEST_F(FutureTest, DISABLED_Then) {
     auto future_a = pool->invoke<std::string>([] () {
         return std::string("Foo Bar");
     });
@@ -113,7 +113,7 @@ TEST_F(FutureTest, DISABLED_WhenFirst) {
     ASSERT_LE(time.count(), 50);
 }
 
-TEST_F(FutureTest, WhenAllBeforeDeadline) {
+TEST_F(FutureTest, DISABLED_WhenAllBeforeDeadline) {
     const size_t N = 10;
     auto start = std::chrono::system_clock::now();
 
